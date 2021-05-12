@@ -551,8 +551,9 @@ def to_html(sample, stats_object):
         else:
             if sys.version_info.major == 3:
                 return str(value)
-            else:
-                return unicode(value)
+            # Drop python 2 support
+            # else:
+            #     return unicode(value)
 
     def freq_table(freqtable, n, var_table, table_template, row_template, max_number_of_items_in_table):
 
